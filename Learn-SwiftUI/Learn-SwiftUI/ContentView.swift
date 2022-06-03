@@ -8,9 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject private var user:User = User()
     var body: some View {
-        Text("Learn Environment object.")
-            .padding()
+        NavigationView {
+            VStack(alignment:.center, spacing: 10) {
+                Text("username-->\(user.name)")
+                TextField("UserName", text: $user.name).padding()
+                NavigationLink("Navigate to second view", destination: SecondView())
+            }
+        }.environmentObject(user)
     }
 }
 
