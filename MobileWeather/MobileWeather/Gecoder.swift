@@ -29,14 +29,14 @@ struct Geocoder {
                     switch result {
                     case.success(let data):
                         for daily in data.daily {
-                            print(daily.dt)
-                            print(dateFormatter.string(from: daily.dt))
-                            print("Max:",daily.temp.max)
-                            print("Min:",daily.temp.min)
-                            print("Humidity:",daily.humidity)
-                            print("Description:",daily.weather[0].description)
-                            print("clouds:",daily.clouds)
-                            print("icon",daily.weather[0].weatherIconURL)
+//                            print(daily.dt)
+//                            print(dateFormatter.string(from: daily.dt))
+//                            print("Max:",daily.temp.max)
+//                            print("Min:",daily.temp.min)
+//                            print("Humidity:",daily.humidity)
+//                            print("Description:",daily.weather[0].description)
+//                            print("clouds:",daily.clouds)
+//                            print("icon",daily.weather[0].weatherIconURL)
                         }
                         break
                     case .failure(let error):
